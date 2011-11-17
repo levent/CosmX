@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BCF2E171475A4A200F2E573 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCF2E161475A4A200F2E573 /* Cocoa.framework */; };
+		2BCF2E211475A4A200F2E573 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BCF2E1F1475A4A200F2E573 /* InfoPlist.strings */; };
+		2BCF2E231475A4A200F2E573 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E221475A4A200F2E573 /* main.m */; };
+		2BCF2E271475A4A200F2E573 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2BCF2E251475A4A200F2E573 /* Credits.rtf */; };
+		2BCF2E2A1475A4A200F2E573 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E291475A4A200F2E573 /* AppDelegate.m */; };
+		2BCF2E2D1475A4A200F2E573 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BCF2E2B1475A4A200F2E573 /* MainMenu.xib */; };
+		2BCF2E301475A4A200F2E573 /* PachStatX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E2E1475A4A200F2E573 /* PachStatX.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2BCF2E121475A4A200F2E573 /* PachStatX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PachStatX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BCF2E161475A4A200F2E573 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		2BCF2E191475A4A200F2E573 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2BCF2E1A1475A4A200F2E573 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2BCF2E1B1475A4A200F2E573 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2BCF2E1E1475A4A200F2E573 /* PachStatX-Info.plist */ = {isa = PBXFileReference; path = "PachStatX-Info.plist"; sourceTree = "<group>"; };
+		2BCF2E201475A4A200F2E573 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2BCF2E221475A4A200F2E573 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BCF2E241475A4A200F2E573 /* PachStatX-Prefix.pch */ = {isa = PBXFileReference; path = "PachStatX-Prefix.pch"; sourceTree = "<group>"; };
+		2BCF2E261475A4A200F2E573 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2BCF2E281475A4A200F2E573 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		2BCF2E291475A4A200F2E573 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2BCF2E2C1475A4A200F2E573 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2BCF2E2F1475A4A200F2E573 /* PachStatX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PachStatX.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BCF2E0F1475A4A200F2E573 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BCF2E171475A4A200F2E573 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BCF2E071475A4A200F2E573 = {
+			isa = PBXGroup;
+			children = (
+				2BCF2E1C1475A4A200F2E573 /* PachStatX */,
+				2BCF2E151475A4A200F2E573 /* Frameworks */,
+				2BCF2E131475A4A200F2E573 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BCF2E131475A4A200F2E573 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BCF2E121475A4A200F2E573 /* PachStatX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BCF2E151475A4A200F2E573 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BCF2E161475A4A200F2E573 /* Cocoa.framework */,
+				2BCF2E181475A4A200F2E573 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2BCF2E181475A4A200F2E573 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BCF2E191475A4A200F2E573 /* AppKit.framework */,
+				2BCF2E1A1475A4A200F2E573 /* CoreData.framework */,
+				2BCF2E1B1475A4A200F2E573 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		2BCF2E1C1475A4A200F2E573 /* PachStatX */ = {
+			isa = PBXGroup;
+			children = (
+				2BCF2E281475A4A200F2E573 /* AppDelegate.h */,
+				2BCF2E291475A4A200F2E573 /* AppDelegate.m */,
+				2BCF2E2B1475A4A200F2E573 /* MainMenu.xib */,
+				2BCF2E2E1475A4A200F2E573 /* PachStatX.xcdatamodeld */,
+				2BCF2E1D1475A4A200F2E573 /* Supporting Files */,
+			);
+			path = PachStatX;
+			sourceTree = "<group>";
+		};
+		2BCF2E1D1475A4A200F2E573 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BCF2E1E1475A4A200F2E573 /* PachStatX-Info.plist */,
+				2BCF2E1F1475A4A200F2E573 /* InfoPlist.strings */,
+				2BCF2E221475A4A200F2E573 /* main.m */,
+				2BCF2E241475A4A200F2E573 /* PachStatX-Prefix.pch */,
+				2BCF2E251475A4A200F2E573 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BCF2E111475A4A200F2E573 /* PachStatX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BCF2E331475A4A200F2E573 /* Build configuration list for PBXNativeTarget "PachStatX" */;
+			buildPhases = (
+				2BCF2E0E1475A4A200F2E573 /* Sources */,
+				2BCF2E0F1475A4A200F2E573 /* Frameworks */,
+				2BCF2E101475A4A200F2E573 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PachStatX;
+			productName = PachStatX;
+			productReference = 2BCF2E121475A4A200F2E573 /* PachStatX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BCF2E091475A4A200F2E573 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 2BCF2E0C1475A4A200F2E573 /* Build configuration list for PBXProject "PachStatX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2BCF2E071475A4A200F2E573;
+			productRefGroup = 2BCF2E131475A4A200F2E573 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BCF2E111475A4A200F2E573 /* PachStatX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BCF2E101475A4A200F2E573 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BCF2E211475A4A200F2E573 /* InfoPlist.strings in Resources */,
+				2BCF2E271475A4A200F2E573 /* Credits.rtf in Resources */,
+				2BCF2E2D1475A4A200F2E573 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BCF2E0E1475A4A200F2E573 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BCF2E231475A4A200F2E573 /* main.m in Sources */,
+				2BCF2E2A1475A4A200F2E573 /* AppDelegate.m in Sources */,
+				2BCF2E301475A4A200F2E573 /* PachStatX.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2BCF2E1F1475A4A200F2E573 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BCF2E201475A4A200F2E573 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2BCF2E251475A4A200F2E573 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BCF2E261475A4A200F2E573 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		2BCF2E2B1475A4A200F2E573 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BCF2E2C1475A4A200F2E573 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BCF2E311475A4A200F2E573 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2BCF2E321475A4A200F2E573 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2BCF2E341475A4A200F2E573 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PachStatX/PachStatX-Prefix.pch";
+				INFOPLIST_FILE = "PachStatX/PachStatX-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2BCF2E351475A4A200F2E573 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PachStatX/PachStatX-Prefix.pch";
+				INFOPLIST_FILE = "PachStatX/PachStatX-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BCF2E0C1475A4A200F2E573 /* Build configuration list for PBXProject "PachStatX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BCF2E311475A4A200F2E573 /* Debug */,
+				2BCF2E321475A4A200F2E573 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BCF2E331475A4A200F2E573 /* Build configuration list for PBXNativeTarget "PachStatX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BCF2E341475A4A200F2E573 /* Debug */,
+				2BCF2E351475A4A200F2E573 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2BCF2E2E1475A4A200F2E573 /* PachStatX.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2BCF2E2F1475A4A200F2E573 /* PachStatX.xcdatamodel */,
+			);
+			currentVersion = 2BCF2E2F1475A4A200F2E573 /* PachStatX.xcdatamodel */;
+			path = PachStatX.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2BCF2E091475A4A200F2E573 /* Project object */;
+}
