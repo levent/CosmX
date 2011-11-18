@@ -17,12 +17,17 @@
 
 @interface CpuController : NSObject {
     processor_info_array_t cpuInfo, prevCpuInfo;
-    mach_msg_type_number_t numCpuInfo, numPrevCpuInfo;
+    mach_msg_type_number_t numCpuInfo, numPrevCpuInfo, sizeRam;
+    struct info;
     unsigned numCPUs;
     NSTimer *updateTimer;
     NSLock *CPUUsageLock;
     NSMutableArray *myDatastreams;
     SBJsonWriter *jsonWriter;
+    
+    NSString *feedId;
+    NSString *apiKey;
+    NSString *url;
 }
 
 -(void)updateCpuInfo:(id)sender;

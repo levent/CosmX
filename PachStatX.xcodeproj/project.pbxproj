@@ -30,8 +30,6 @@
 		2BCF2E701476615C00F2E573 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E621476615B00F2E573 /* SBJsonTokeniser.m */; };
 		2BCF2E711476615C00F2E573 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E641476615B00F2E573 /* SBJsonUTF8Stream.m */; };
 		2BCF2E721476615C00F2E573 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E661476615C00F2E573 /* SBJsonWriter.m */; };
-		2BCF2E7E1476673100F2E573 /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E7D1476673000F2E573 /* Feed.m */; };
-		2BCF2E811476673100F2E573 /* Datastream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E801476673100F2E573 /* Datastream.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,10 +79,6 @@
 		2BCF2E641476615B00F2E573 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		2BCF2E651476615C00F2E573 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		2BCF2E661476615C00F2E573 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		2BCF2E7C1476673000F2E573 /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
-		2BCF2E7D1476673000F2E573 /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
-		2BCF2E7F1476673100F2E573 /* Datastream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Datastream.h; sourceTree = "<group>"; };
-		2BCF2E801476673100F2E573 /* Datastream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Datastream.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,10 +143,6 @@
 				2BCF2E3F147644D000F2E573 /* PreferencesController.m */,
 				2BCF2E41147644E400F2E573 /* Preferences.xib */,
 				2BCF2E2E1475A4A200F2E573 /* PachStatX.xcdatamodeld */,
-				2BCF2E7F1476673100F2E573 /* Datastream.h */,
-				2BCF2E801476673100F2E573 /* Datastream.m */,
-				2BCF2E7C1476673000F2E573 /* Feed.h */,
-				2BCF2E7D1476673000F2E573 /* Feed.m */,
 				2BCF2E1D1475A4A200F2E573 /* Supporting Files */,
 			);
 			path = PachStatX;
@@ -277,8 +267,6 @@
 				2BCF2E701476615C00F2E573 /* SBJsonTokeniser.m in Sources */,
 				2BCF2E711476615C00F2E573 /* SBJsonUTF8Stream.m in Sources */,
 				2BCF2E721476615C00F2E573 /* SBJsonWriter.m in Sources */,
-				2BCF2E7E1476673100F2E573 /* Feed.m in Sources */,
-				2BCF2E811476673100F2E573 /* Datastream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

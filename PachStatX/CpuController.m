@@ -11,7 +11,10 @@
 @implementation CpuController
 
 - (void)updateCpuInfo:(id)sender
-{    
+{
+    feedId = [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"];
+    apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
+    url = [[NSString alloc] initWithFormat:@"http://api.pachube.com/v2/feeds/%@.json?key=%@", feedId, apiKey]; 
     NSLog(@"win");
     int mib[2U] = { CTL_HW, HW_NCPU };
     size_t sizeOfNumCPUs = sizeof(numCPUs);
@@ -34,8 +37,17 @@
     jsonWriter = [SBJsonWriter new];
     natural_t numCPUsU = 0U;
     kern_return_t err = host_processor_info(mach_host_self(), PROCESSOR_CPU_LOAD_INFO, &numCPUsU, &cpuInfo, &numCpuInfo);
+    
+    // RAM bunk
+    struct task_basic_info info;
+    sizeRam = sizeof(info);
+    kern_return_t kerr = task_info(mach_task_self(), TASK_BASIC_INFO, (task_info_t)&info, &sizeRam);
+
+
     if(err == KERN_SUCCESS) {
         [CPUUsageLock lock];
+        
+
         
         for(unsigned i = 0U; i < numCPUs; ++i) {
             float inUse, total;
@@ -76,6 +88,19 @@
         NSLog(@"Error!");
         [NSApp terminate:nil];
     }
+
+    
+    if(kerr == KERN_SUCCESS) {
+        NSString *currentValue = [[NSString alloc] initWithFormat:@"%u", info.resident_size];
+        NSString *streamId = [[NSString alloc] initWithFormat:@"memory"];
+        
+        NSDictionary *aDatastream = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                     currentValue, @"current_value",
+                                     streamId, @"id",
+                                     nil];
+        
+        [myDatastreams addObject:aDatastream];
+    }
     
     NSDictionary *feed = [[NSDictionary alloc] initWithObjectsAndKeys:
                             @"System info", @"title",
@@ -83,11 +108,8 @@
                             @"1.0.0", @"version",
                             nil];
     
-    NSString *feedId = [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"];
-    NSString *apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
-    
-    NSString *url = [[NSString alloc] initWithFormat:@"http://api.pachube.com/v2/feeds/%@.json?key=%@", feedId, apiKey]; 
-    NSMutableData *responseData = [NSMutableData data];
+
+//    NSMutableData *responseData = [NSMutableData data];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     [request setHTTPMethod:@"PUT"];
     NSString *postString = [jsonWriter stringWithObject:feed];
