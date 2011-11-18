@@ -20,8 +20,14 @@
     NSStatusItem *statusItem;
     IBOutlet NSMenu *statusMenu;
     
+    IBOutlet NSMenuItem *isRunning;
+    IBOutlet NSMenuItem *turnOffMenuItem;
+    IBOutlet NSMenuItem *turnOnMenuItem;
+    
 }
 
 - (IBAction)showPreferences:(id)sender;
+- (IBAction)turnOff:(id)sender;
+- (IBAction)turnOn:(id)sender;
 
 @end

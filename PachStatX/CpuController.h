@@ -28,8 +28,12 @@
     NSString *feedId;
     NSString *apiKey;
     NSString *url;
+    
+    BOOL paused;
 }
 
 -(void)updateCpuInfo:(id)sender;
+-(void)pause:(id)sender;
+-(void)unpause:(id)sender;
 
 @end

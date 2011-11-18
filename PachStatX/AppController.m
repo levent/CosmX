@@ -10,6 +10,24 @@
 
 @implementation AppController
 
+-(IBAction)turnOn:(id)sender {
+    [turnOnMenuItem setHidden:YES];
+    [turnOffMenuItem setHidden:NO];
+    [isRunning setTitle:@"Running..."];
+    [cpuController unpause:self];
+//    NSLog(@"%c on", [turnOnMenuItem isHidden]);
+//    NSLog(@"%c off", [turnOffMenuItem isHidden]);    
+}
+
+-(IBAction)turnOff:(id)sender {
+    [turnOnMenuItem setHidden:NO];
+    [turnOffMenuItem setHidden:YES];
+    [isRunning setTitle:@"Stopped..."];
+    [cpuController pause:self];
+//    NSLog(@"%c on", [turnOnMenuItem isHidden]);
+//    NSLog(@"%c off", [turnOffMenuItem isHidden]);
+}
+
 -(IBAction)showPreferences:(id)sender {
     if(!preferencesController)
         preferencesController = [[PreferencesController alloc] initWithWindowNibName:@"Preferences"];
