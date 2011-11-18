@@ -14,6 +14,9 @@
 		2BCF2E2A1475A4A200F2E573 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E291475A4A200F2E573 /* AppDelegate.m */; };
 		2BCF2E2D1475A4A200F2E573 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BCF2E2B1475A4A200F2E573 /* MainMenu.xib */; };
 		2BCF2E301475A4A200F2E573 /* PachStatX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E2E1475A4A200F2E573 /* PachStatX.xcdatamodeld */; };
+		2BCF2E3C147644A100F2E573 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E3B147644A100F2E573 /* AppController.m */; };
+		2BCF2E40147644D000F2E573 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E3F147644D000F2E573 /* PreferencesController.m */; };
+		2BCF2E43147644E400F2E573 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BCF2E41147644E400F2E573 /* Preferences.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +25,20 @@
 		2BCF2E191475A4A200F2E573 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		2BCF2E1A1475A4A200F2E573 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2BCF2E1B1475A4A200F2E573 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2BCF2E1E1475A4A200F2E573 /* PachStatX-Info.plist */ = {isa = PBXFileReference; path = "PachStatX-Info.plist"; sourceTree = "<group>"; };
+		2BCF2E1E1475A4A200F2E573 /* PachStatX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PachStatX-Info.plist"; sourceTree = "<group>"; };
 		2BCF2E201475A4A200F2E573 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2BCF2E221475A4A200F2E573 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2BCF2E241475A4A200F2E573 /* PachStatX-Prefix.pch */ = {isa = PBXFileReference; path = "PachStatX-Prefix.pch"; sourceTree = "<group>"; };
+		2BCF2E241475A4A200F2E573 /* PachStatX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PachStatX-Prefix.pch"; sourceTree = "<group>"; };
 		2BCF2E261475A4A200F2E573 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		2BCF2E281475A4A200F2E573 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		2BCF2E281475A4A200F2E573 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BCF2E291475A4A200F2E573 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2BCF2E2C1475A4A200F2E573 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2BCF2E2F1475A4A200F2E573 /* PachStatX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PachStatX.xcdatamodel; sourceTree = "<group>"; };
+		2BCF2E3A147644A100F2E573 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		2BCF2E3B147644A100F2E573 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		2BCF2E3E147644D000F2E573 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		2BCF2E3F147644D000F2E573 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		2BCF2E42147644E400F2E573 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Preferences.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,11 @@
 				2BCF2E281475A4A200F2E573 /* AppDelegate.h */,
 				2BCF2E291475A4A200F2E573 /* AppDelegate.m */,
 				2BCF2E2B1475A4A200F2E573 /* MainMenu.xib */,
+				2BCF2E3A147644A100F2E573 /* AppController.h */,
+				2BCF2E3B147644A100F2E573 /* AppController.m */,
+				2BCF2E3E147644D000F2E573 /* PreferencesController.h */,
+				2BCF2E3F147644D000F2E573 /* PreferencesController.m */,
+				2BCF2E41147644E400F2E573 /* Preferences.xib */,
 				2BCF2E2E1475A4A200F2E573 /* PachStatX.xcdatamodeld */,
 				2BCF2E1D1475A4A200F2E573 /* Supporting Files */,
 			);
@@ -158,6 +171,7 @@
 				2BCF2E211475A4A200F2E573 /* InfoPlist.strings in Resources */,
 				2BCF2E271475A4A200F2E573 /* Credits.rtf in Resources */,
 				2BCF2E2D1475A4A200F2E573 /* MainMenu.xib in Resources */,
+				2BCF2E43147644E400F2E573 /* Preferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +185,8 @@
 				2BCF2E231475A4A200F2E573 /* main.m in Sources */,
 				2BCF2E2A1475A4A200F2E573 /* AppDelegate.m in Sources */,
 				2BCF2E301475A4A200F2E573 /* PachStatX.xcdatamodeld in Sources */,
+				2BCF2E3C147644A100F2E573 /* AppController.m in Sources */,
+				2BCF2E40147644D000F2E573 /* PreferencesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +215,14 @@
 				2BCF2E2C1475A4A200F2E573 /* en */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		2BCF2E41147644E400F2E573 /* Preferences.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BCF2E42147644E400F2E573 /* en */,
+			);
+			name = Preferences.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -292,6 +316,7 @@
 				2BCF2E351475A4A200F2E573 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
