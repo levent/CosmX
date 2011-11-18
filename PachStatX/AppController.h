@@ -15,8 +15,8 @@
     @private
     PreferencesController *preferencesController;
     CpuController *cpuController;
-    IBOutlet NSWindow *mainWindow;
-    IBOutlet NSImageView *feedGraph;
+//    IBOutlet NSWindow *mainWindow;
+//    IBOutlet NSImageView *feedGraph;
     NSStatusItem *statusItem;
     IBOutlet NSMenu *statusMenu;
     

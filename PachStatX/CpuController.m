@@ -15,7 +15,6 @@
     feedId = [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"];
     apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
     url = [[NSString alloc] initWithFormat:@"http://api.pachube.com/v2/feeds/%@.json?key=%@", feedId, apiKey]; 
-    NSLog(@"win");
     int mib[2U] = { CTL_HW, HW_NCPU };
     size_t sizeOfNumCPUs = sizeof(numCPUs);
     int status = sysctl(mib, 2U, &numCPUs, &sizeOfNumCPUs, NULL, 0U);

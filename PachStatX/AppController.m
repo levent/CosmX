@@ -45,24 +45,6 @@
     [statusItem setMenu:statusMenu];
     [statusItem setTitle:@"PachStatX"];
     [statusItem setHighlightMode:YES];
-    
-    NSString *feedId = [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"];
-    NSString *apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
-    NSLog(@"%@ %@", feedId, apiKey);
-    NSString *url = [[NSString alloc] initWithFormat:@"http://api.pachube.com/v2/feeds/%@/datastreams/0.png?duration=24hours&width=%.0f&height=%.0f&show_axis_labels=rel&colour=000000", feedId, feedGraph.frame.size.width, feedGraph.frame.size.height];
-    NSLog(@"%@", url);
-    NSData *receivedGraph = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-    NSImage *image = [[NSImage alloc] initWithData:receivedGraph];
-//    feedGraph.image = image;
-    [feedGraph setImage:image];
-//    feedGraph.image = image;
-//    navigationBarTitle.title = [[NSString alloc] initWithFormat:@"Feed: %@", feedId];
-
 }
-
-//-(void)dealloc {
-//    [preferencesController release];
-//    [super dealloc];
-//}
 
 @end
