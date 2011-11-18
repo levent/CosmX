@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SBJson.h"
 #import "PreferencesController.h"
 #import "CpuController.h"
 
 @interface AppController : NSObject {
     @private
     PreferencesController *preferencesController;
-    CpuController *cpuController;    
+    CpuController *cpuController;
     IBOutlet NSWindow *mainWindow;
     IBOutlet NSImageView *feedGraph;
     NSStatusItem *statusItem;

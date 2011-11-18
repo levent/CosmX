@@ -25,7 +25,7 @@
     
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [statusItem setMenu:statusMenu];
-    [statusItem setTitle:@"Status"];
+    [statusItem setTitle:@"PachStatX"];
     [statusItem setHighlightMode:YES];
     
     NSString *feedId = [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"];

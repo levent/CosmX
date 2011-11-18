@@ -22,7 +22,7 @@
     
     CPUUsageLock = [[NSLock alloc] init];
     
-    updateTimer = [NSTimer scheduledTimerWithTimeInterval:3
+    updateTimer = [NSTimer scheduledTimerWithTimeInterval:10
                                                     target:self
                                                   selector:@selector(updateInfo:)
                                                   userInfo:nil
