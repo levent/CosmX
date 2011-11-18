@@ -17,6 +17,7 @@
 		2BCF2E3C147644A100F2E573 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E3B147644A100F2E573 /* AppController.m */; };
 		2BCF2E40147644D000F2E573 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E3F147644D000F2E573 /* PreferencesController.m */; };
 		2BCF2E43147644E400F2E573 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BCF2E41147644E400F2E573 /* Preferences.xib */; };
+		2BCF2E4D147654B800F2E573 /* CpuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E4C147654B800F2E573 /* CpuController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		2BCF2E3E147644D000F2E573 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		2BCF2E3F147644D000F2E573 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		2BCF2E42147644E400F2E573 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Preferences.xib; sourceTree = "<group>"; };
+		2BCF2E4B147654B800F2E573 /* CpuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CpuController.h; sourceTree = "<group>"; };
+		2BCF2E4C147654B800F2E573 /* CpuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CpuController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 		2BCF2E1C1475A4A200F2E573 /* PachStatX */ = {
 			isa = PBXGroup;
 			children = (
+				2BCF2E4B147654B800F2E573 /* CpuController.h */,
+				2BCF2E4C147654B800F2E573 /* CpuController.m */,
 				2BCF2E281475A4A200F2E573 /* AppDelegate.h */,
 				2BCF2E291475A4A200F2E573 /* AppDelegate.m */,
 				2BCF2E2B1475A4A200F2E573 /* MainMenu.xib */,
@@ -187,6 +192,7 @@
 				2BCF2E301475A4A200F2E573 /* PachStatX.xcdatamodeld in Sources */,
 				2BCF2E3C147644A100F2E573 /* AppController.m in Sources */,
 				2BCF2E40147644D000F2E573 /* PreferencesController.m in Sources */,
+				2BCF2E4D147654B800F2E573 /* CpuController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,11 +13,21 @@
 -(IBAction)showPreferences:(id)sender {
     if(!preferencesController)
         preferencesController = [[PreferencesController alloc] initWithWindowNibName:@"Preferences"];
-    NSLog(@"here");
     [preferencesController showWindow:self];
 }
 
 -(void)awakeFromNib {
+    
+    if(!cpuController)
+        cpuController = [[CpuController alloc] init];
+    
+    [cpuController updateCpuInfo:self];
+    
+    statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    [statusItem setMenu:statusMenu];
+    [statusItem setTitle:@"Status"];
+    [statusItem setHighlightMode:YES];
+    
     NSString *feedId = [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"];
     NSString *apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
     NSLog(@"%@ %@", feedId, apiKey);

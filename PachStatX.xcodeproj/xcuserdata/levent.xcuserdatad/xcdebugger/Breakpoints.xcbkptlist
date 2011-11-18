@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "PachStatX/AppController.m"
-         timestampString = "343297827.652827"
+         timestampString = "343301987.940109"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "24"
-         endingLineNumber = "24"
+         startingLineNumber = "34"
+         endingLineNumber = "34"
          landmarkName = "-awakeFromNib"
          landmarkType = "5">
       </FileBreakpoint>

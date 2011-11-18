@@ -8,12 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "PreferencesController.h"
+#import "CpuController.h"
 
 @interface AppController : NSObject {
     @private
     PreferencesController *preferencesController;
+    CpuController *cpuController;    
     IBOutlet NSWindow *mainWindow;
     IBOutlet NSImageView *feedGraph;
+    NSStatusItem *statusItem;
+    IBOutlet NSMenu *statusMenu;
 }
 
 - (IBAction)showPreferences:(id)sender;
