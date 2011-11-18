@@ -19,6 +19,7 @@
     IBOutlet NSImageView *feedGraph;
     NSStatusItem *statusItem;
     IBOutlet NSMenu *statusMenu;
+    
 }
 
 - (IBAction)showPreferences:(id)sender;

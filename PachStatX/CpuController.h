@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SBJson.h"
 #include <sys/sysctl.h>
 #include <sys/types.h>
 #include <mach/mach.h>
@@ -20,6 +21,8 @@
     unsigned numCPUs;
     NSTimer *updateTimer;
     NSLock *CPUUsageLock;
+    NSMutableArray *myDatastreams;
+    SBJsonWriter *jsonWriter;
 }
 
 -(void)updateCpuInfo:(id)sender;
