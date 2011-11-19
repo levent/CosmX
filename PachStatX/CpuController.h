@@ -29,6 +29,8 @@
     NSString *apiKey;
     NSString *url;
     
+    NSURLConnection *connectionPachube;
+    
     BOOL paused;
 }
 

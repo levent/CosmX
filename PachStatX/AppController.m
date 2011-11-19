@@ -15,8 +15,6 @@
     [turnOffMenuItem setHidden:NO];
     [isRunning setTitle:@"Running..."];
     [cpuController unpause:self];
-//    NSLog(@"%c on", [turnOnMenuItem isHidden]);
-//    NSLog(@"%c off", [turnOffMenuItem isHidden]);    
 }
 
 -(IBAction)turnOff:(id)sender {
@@ -24,14 +22,18 @@
     [turnOffMenuItem setHidden:YES];
     [isRunning setTitle:@"Stopped..."];
     [cpuController pause:self];
-//    NSLog(@"%c on", [turnOnMenuItem isHidden]);
-//    NSLog(@"%c off", [turnOffMenuItem isHidden]);
 }
 
 -(IBAction)showPreferences:(id)sender {
     if(!preferencesController)
         preferencesController = [[PreferencesController alloc] initWithWindowNibName:@"Preferences"];
     [preferencesController showWindow:self];
+}
+
+-(IBAction)viewFeed:(id)sender {
+    feedURL = [[NSString alloc] initWithFormat:@"https://pachube.com/feeds/%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"]]; 
+    NSURL *url = [NSURL URLWithString:feedURL];
+    [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
 -(void)awakeFromNib {

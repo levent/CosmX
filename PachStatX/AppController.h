@@ -24,10 +24,14 @@
     IBOutlet NSMenuItem *turnOffMenuItem;
     IBOutlet NSMenuItem *turnOnMenuItem;
     
+    IBOutlet NSMenuItem *viewFeedMenuItem;
+    NSString *feedURL;
+    
 }
 
 - (IBAction)showPreferences:(id)sender;
 - (IBAction)turnOff:(id)sender;
 - (IBAction)turnOn:(id)sender;
+- (IBAction)viewFeed:(id)sender;
 
 @end

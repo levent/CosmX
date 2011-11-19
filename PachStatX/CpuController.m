@@ -144,14 +144,13 @@
                                 @"1.0.0", @"version",
                                 nil];
         
-
-    //    NSMutableData *responseData = [NSMutableData data];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
         [request setHTTPMethod:@"PUT"];
         NSString *postString = [jsonWriter stringWithObject:feed];
         [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
-        [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        connectionPachube = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     }
 }
+
 
 @end
