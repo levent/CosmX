@@ -137,9 +137,9 @@
             
             [myDatastreams addObject:aDatastream];
         }
-        
+        NSString *title = [[NSString alloc] initWithFormat:@"System info (%@)", [[NSHost currentHost] localizedName]];
         NSDictionary *feed = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                @"System info", @"title",
+                                title, @"title",
                                 myDatastreams,@"datastreams",
                                 @"1.0.0", @"version",
                                 nil];
