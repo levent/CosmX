@@ -75,7 +75,7 @@
 					<object class="NSMenuItem" id="83188499">
 						<reference key="NSMenu" ref="497863820"/>
 						<bool key="NSIsDisabled">YES</bool>
-						<string key="NSTitle">Enabled</string>
+						<string key="NSTitle">Running...</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="963089672"/>
