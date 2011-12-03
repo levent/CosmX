@@ -12,9 +12,6 @@
 
 - (void)updateCpuInfo:(id)sender
 {
-    feedId = [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"];
-    apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
-    url = [[NSString alloc] initWithFormat:@"http://api.pachube.com/v2/feeds/%@.json?key=%@", feedId, apiKey]; 
     int mib[2U] = { CTL_HW, HW_NCPU };
     size_t sizeOfNumCPUs = sizeof(numCPUs);
     int status = sysctl(mib, 2U, &numCPUs, &sizeOfNumCPUs, NULL, 0U);
@@ -144,6 +141,10 @@
                                 @"1.0.0", @"version",
                                 nil];
         
+        feedId = [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"];
+        apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
+        url = [[NSString alloc] initWithFormat:@"http://api.pachube.com/v2/feeds/%@.json?key=%@", feedId, apiKey];
+
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
         [request setHTTPMethod:@"PUT"];
         NSString *postString = [jsonWriter stringWithObject:feed];
