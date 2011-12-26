@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B02B9A114A8933A00F8F6E5 /* ApplicationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B02B9A014A8933A00F8F6E5 /* ApplicationTemplate.m */; };
 		2B927AC71476D80F00892BDE /* pachube_badge copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B927AC61476D80F00892BDE /* pachube_badge copy.png */; };
 		2BCF2E171475A4A200F2E573 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCF2E161475A4A200F2E573 /* Cocoa.framework */; };
 		2BCF2E211475A4A200F2E573 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BCF2E1F1475A4A200F2E573 /* InfoPlist.strings */; };
@@ -34,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B02B99F14A8933A00F8F6E5 /* ApplicationTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationTemplate.h; sourceTree = "<group>"; };
+		2B02B9A014A8933A00F8F6E5 /* ApplicationTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationTemplate.m; sourceTree = "<group>"; };
 		2B927AC61476D80F00892BDE /* pachube_badge copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pachube_badge copy.png"; sourceTree = "<group>"; };
 		2BCF2E121475A4A200F2E573 /* PachStatX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PachStatX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCF2E161475A4A200F2E573 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -135,6 +138,8 @@
 		2BCF2E1C1475A4A200F2E573 /* PachStatX */ = {
 			isa = PBXGroup;
 			children = (
+				2B02B99F14A8933A00F8F6E5 /* ApplicationTemplate.h */,
+				2B02B9A014A8933A00F8F6E5 /* ApplicationTemplate.m */,
 				2BCF2E4B147654B800F2E573 /* CpuController.h */,
 				2BCF2E4C147654B800F2E573 /* CpuController.m */,
 				2BCF2E281475A4A200F2E573 /* AppDelegate.h */,
@@ -271,6 +276,7 @@
 				2BCF2E701476615C00F2E573 /* SBJsonTokeniser.m in Sources */,
 				2BCF2E711476615C00F2E573 /* SBJsonUTF8Stream.m in Sources */,
 				2BCF2E721476615C00F2E573 /* SBJsonWriter.m in Sources */,
+				2B02B9A114A8933A00F8F6E5 /* ApplicationTemplate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
