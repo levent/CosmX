@@ -98,9 +98,15 @@
                 
                 NSString *currentValue = [[NSString alloc] initWithFormat:@"%.2f", (inUse / total) * 100.0];
                 NSString *streamId = [[NSString alloc] initWithFormat:@"cpu_%i", i];
+                NSDictionary *aDatastreamUnits = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                                  @"%", @"symbol", 
+                                                  @"Percent", @"label",
+                                                  nil];
                 NSDictionary *aDatastream = [[NSDictionary alloc] initWithObjectsAndKeys:
                                                   currentValue, @"current_value",
                                                   streamId, @"id",
+                                                  @"cpu", @"tags",
+                                                  aDatastreamUnits, @"unit",
                                                   nil];
 
                 [myDatastreams insertObject:aDatastream atIndex:i];
@@ -130,6 +136,7 @@
             NSDictionary *aDatastream = [[NSDictionary alloc] initWithObjectsAndKeys:
                                          currentValue, @"current_value",
                                          streamId, @"id",
+                                         @"memory", @"tags",
                                          nil];
             
             [myDatastreams addObject:aDatastream];
