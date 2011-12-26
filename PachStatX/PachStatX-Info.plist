@@ -29,7 +29,7 @@
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
-	<string>NSApplication</string>
+	<string>ApplicationTemplate</string>
 	<key>LSUIElement</key>
 	<true/>
 </dict>
