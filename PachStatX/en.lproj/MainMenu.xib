@@ -118,7 +118,7 @@
 					</object>
 					<object class="NSMenuItem" id="707452234">
 						<reference key="NSMenu" ref="497863820"/>
-						<string key="NSTitle">Quit</string>
+						<string key="NSTitle">Quit PachStatX</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="963089672"/>
