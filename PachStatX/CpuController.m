@@ -128,19 +128,21 @@
             [NSApp terminate:nil];
         }
 
+
+// Use for debugging memory
+//        if(kerr == KERN_SUCCESS) {
+//            NSString *currentValue = [[NSString alloc] initWithFormat:@"%u", info.resident_size];
+//            NSString *streamId = [[NSString alloc] initWithFormat:@"memory"];
+//            
+//            NSDictionary *aDatastream = [[NSDictionary alloc] initWithObjectsAndKeys:
+//                                         currentValue, @"current_value",
+//                                         streamId, @"id",
+//                                         @"memory", @"tags",
+//                                         nil];
+//            
+//            [myDatastreams addObject:aDatastream];
+//        }
         
-        if(kerr == KERN_SUCCESS) {
-            NSString *currentValue = [[NSString alloc] initWithFormat:@"%u", info.resident_size];
-            NSString *streamId = [[NSString alloc] initWithFormat:@"memory"];
-            
-            NSDictionary *aDatastream = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                         currentValue, @"current_value",
-                                         streamId, @"id",
-                                         @"memory", @"tags",
-                                         nil];
-            
-            [myDatastreams addObject:aDatastream];
-        }
         NSString *title = [[NSString alloc] initWithFormat:@"System info (%@)", [[NSHost currentHost] localizedName]];
         NSDictionary *feed = [[NSDictionary alloc] initWithObjectsAndKeys:
                                 title, @"title",

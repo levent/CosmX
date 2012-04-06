@@ -31,7 +31,7 @@
 }
 
 -(IBAction)viewFeed:(id)sender {
-    feedURL = [[NSString alloc] initWithFormat:@"https://pachube.com/feeds/%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"]]; 
+    feedURL = [[NSString alloc] initWithFormat:@"https://cosm.com/feeds/%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"]]; 
     NSURL *url = [NSURL URLWithString:feedURL];
     [[NSWorkspace sharedWorkspace] openURL:url];
 }
@@ -42,10 +42,17 @@
         cpuController = [[CpuController alloc] init];
     
     [cpuController updateCpuInfo:self];
-    
+
+    NSImage *statusImage = [NSImage imageNamed:@"logo-stamp.png"];
+//    NSSize imageSize;
+//    imageSize = [statusImage size];
+//    imageSize.height /= 2.6;
+//    imageSize.width /= 2.6;
+//    [statusImage setSize:imageSize];
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [statusItem setMenu:statusMenu];
-    [statusItem setTitle:@"PachStatX"];
+//    [statusItem setTitle:@"PachStatX"];
+    [statusItem setImage:statusImage];
     [statusItem setHighlightMode:YES];
 }
 
