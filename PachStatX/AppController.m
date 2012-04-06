@@ -11,6 +11,7 @@
 @implementation AppController
 
 -(IBAction)turnOn:(id)sender {
+    [statusItem setImage:onImage];
     [turnOnMenuItem setHidden:YES];
     [turnOffMenuItem setHidden:NO];
     [isRunning setTitle:@"Running..."];
@@ -18,6 +19,7 @@
 }
 
 -(IBAction)turnOff:(id)sender {
+    [statusItem setImage:offImage];
     [turnOnMenuItem setHidden:NO];
     [turnOffMenuItem setHidden:YES];
     [isRunning setTitle:@"Stopped..."];
@@ -43,16 +45,11 @@
     
     [cpuController updateCpuInfo:self];
 
-    NSImage *statusImage = [NSImage imageNamed:@"logo-stamp.png"];
-//    NSSize imageSize;
-//    imageSize = [statusImage size];
-//    imageSize.height /= 2.6;
-//    imageSize.width /= 2.6;
-//    [statusImage setSize:imageSize];
+    onImage = [NSImage imageNamed:@"logo-stamp.png"];
+    offImage = [NSImage imageNamed:@"logo-stamp-bw.png"];
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [statusItem setMenu:statusMenu];
-//    [statusItem setTitle:@"PachStatX"];
-    [statusItem setImage:statusImage];
+    [statusItem setImage:onImage];
     [statusItem setHighlightMode:YES];
 }
 

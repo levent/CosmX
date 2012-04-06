@@ -26,7 +26,8 @@
     
     IBOutlet NSMenuItem *viewFeedMenuItem;
     NSString *feedURL;
-    
+    NSImage *onImage;
+    NSImage *offImage;
 }
 
 - (IBAction)showPreferences:(id)sender;
