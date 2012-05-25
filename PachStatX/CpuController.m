@@ -152,13 +152,13 @@
         
         feedId = [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"];
         apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
-        url = [[NSString alloc] initWithFormat:@"http://api.pachube.com/v2/feeds/%@.json?key=%@", feedId, apiKey];
+        url = [[NSString alloc] initWithFormat:@"http://api.cosm.com/v2/feeds/%@.json?key=%@", feedId, apiKey];
 
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
         [request setHTTPMethod:@"PUT"];
         NSString *postString = [jsonWriter stringWithObject:feed];
         [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
-        connectionPachube = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        connectionCosm = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     }
 }
 

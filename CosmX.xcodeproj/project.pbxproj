@@ -46,10 +46,10 @@
 		2BCF2E191475A4A200F2E573 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		2BCF2E1A1475A4A200F2E573 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2BCF2E1B1475A4A200F2E573 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2BCF2E1E1475A4A200F2E573 /* CosmX-Info.plist */ = {isa = PBXFileReference; path = "CosmX-Info.plist"; sourceTree = "<group>"; };
+		2BCF2E1E1475A4A200F2E573 /* CosmX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CosmX-Info.plist"; sourceTree = "<group>"; };
 		2BCF2E201475A4A200F2E573 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2BCF2E221475A4A200F2E573 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2BCF2E241475A4A200F2E573 /* CosmX-Prefix.pch */ = {isa = PBXFileReference; path = "CosmX-Prefix.pch"; sourceTree = "<group>"; };
+		2BCF2E241475A4A200F2E573 /* CosmX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CosmX-Prefix.pch"; sourceTree = "<group>"; };
 		2BCF2E261475A4A200F2E573 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2BCF2E281475A4A200F2E573 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BCF2E291475A4A200F2E573 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				2B927AC61476D80F00892BDE /* pachube_badge copy.png */,
-				2BCF2E1C1475A4A200F2E573 /* PachStatX */,
+				2BCF2E1C1475A4A200F2E573 /* CosmX */,
 				2BCF2E151475A4A200F2E573 /* Frameworks */,
 				2BCF2E131475A4A200F2E573 /* Products */,
 			);
@@ -138,7 +138,7 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		2BCF2E1C1475A4A200F2E573 /* PachStatX */ = {
+		2BCF2E1C1475A4A200F2E573 /* CosmX */ = {
 			isa = PBXGroup;
 			children = (
 				2B62E868152EE674001E776B /* logo-stamp.png */,
@@ -158,6 +158,7 @@
 				2BCF2E2E1475A4A200F2E573 /* PachStatX.xcdatamodeld */,
 				2BCF2E1D1475A4A200F2E573 /* Supporting Files */,
 			);
+			name = CosmX;
 			path = PachStatX;
 			sourceTree = "<group>";
 		};

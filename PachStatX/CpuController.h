@@ -29,7 +29,7 @@
     NSString *apiKey;
     NSString *url;
     
-    NSURLConnection *connectionPachube;
+    NSURLConnection *connectionCosm;
     
     BOOL paused;
 }
