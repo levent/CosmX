@@ -1,6 +1,6 @@
 //
 //  AppController.h
-//  PachStatX
+//  CosmX
 //
 //  Created by Levent Ali on 18/11/2011.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.

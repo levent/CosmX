@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  PachStatX
+//  CosmX
 //
 //  Created by Levent Ali on 17/11/2011.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
@@ -21,13 +21,13 @@
 }
 
 /**
-    Returns the directory the application uses to store the Core Data store file. This code uses a directory named "PachStatX" in the user's Library directory.
+    Returns the directory the application uses to store the Core Data store file. This code uses a directory named "CosmX" in the user's Library directory.
  */
 - (NSURL *)applicationFilesDirectory {
 
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *libraryURL = [[fileManager URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask] lastObject];
-    return [libraryURL URLByAppendingPathComponent:@"PachStatX"];
+    return [libraryURL URLByAppendingPathComponent:@"CosmX"];
 }
 
 /**
@@ -38,7 +38,7 @@
         return __managedObjectModel;
     }
 	
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"PachStatX" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"CosmX" withExtension:@"momd"];
     __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];    
     return __managedObjectModel;
 }
@@ -87,7 +87,7 @@
         }
     }
     
-    NSURL *url = [applicationFilesDirectory URLByAppendingPathComponent:@"PachStatX.storedata"];
+    NSURL *url = [applicationFilesDirectory URLByAppendingPathComponent:@"CosmX.storedata"];
     NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
     if (![coordinator addPersistentStoreWithType:NSXMLStoreType configuration:nil URL:url options:nil error:&error]) {
         [[NSApplication sharedApplication] presentError:error];
