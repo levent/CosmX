@@ -33,9 +33,12 @@
 }
 
 -(IBAction)viewFeed:(id)sender {
-    feedURL = [[NSString alloc] initWithFormat:@"https://cosm.com/feeds/%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"]]; 
-    NSURL *url = [NSURL URLWithString:feedURL];
-    [[NSWorkspace sharedWorkspace] openURL:url];
+    NSString *feedId = [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"];
+    if (feedId.length != 0) {
+        feedURL = [[NSString alloc] initWithFormat:@"https://cosm.com/feeds/%@", feedId]; 
+        NSURL *url = [NSURL URLWithString:feedURL];
+        [[NSWorkspace sharedWorkspace] openURL:url];
+    }
 }
 
 -(void)awakeFromNib {
