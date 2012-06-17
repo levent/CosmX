@@ -30,6 +30,7 @@
     if(!preferencesController)
         preferencesController = [[PreferencesController alloc] initWithWindowNibName:@"Preferences"];
     [preferencesController showWindow:self];
+    [preferencesController.window orderFrontRegardless];
 }
 
 -(IBAction)viewFeed:(id)sender {
