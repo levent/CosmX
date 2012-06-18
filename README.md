@@ -8,7 +8,7 @@ All you need is to create an empty feed on Cosm and to have an api key that can 
 
 [Download from Github](https://github.com/downloads/levent/CosmX/CosmX%2020120619.dmg)
 
-## Sample feeds
+## Sample Feeds
 
 [My work iMac](https://cosm.com/feeds/40360)
 
