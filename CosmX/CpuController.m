@@ -144,8 +144,10 @@
 //        }
         
         NSString *title = [[NSString alloc] initWithFormat:@"System info (%@)", [[NSHost currentHost] localizedName]];
+        NSArray *feedTags = [[NSArray alloc] initWithObjects:@"app:author=lebreeze", @"app:name=CosmX", nil];
         NSDictionary *feed = [[NSDictionary alloc] initWithObjectsAndKeys:
                                 title, @"title",
+                                feedTags, @"tags",
                                 myDatastreams,@"datastreams",
                                 @"1.0.0", @"version",
                                 nil];
