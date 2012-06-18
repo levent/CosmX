@@ -23,3 +23,4 @@ OS X Leopard (10.5)
 ## TODO
 
 Track more stuff
+Handle save on blur user experience issue (they don't always blur)
