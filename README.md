@@ -19,3 +19,7 @@ All you need is to create an empty feed on Cosm and to have an api key that can 
 ## System Requirements
 
 OS X Leopard (10.5)
+
+## TODO
+
+Track more stuff
