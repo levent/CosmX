@@ -108,7 +108,7 @@
         // CPU Type
         NSDictionary *cpuType = [[NSDictionary alloc] initWithObjectsAndKeys:
                                     [self cpuType], @"current_value",
-                                    @"cpu", @"id",
+                                    @"cpu_info", @"id",
                                     nil];
 
         NSDictionary *ramUnits = [[NSDictionary alloc] initWithObjectsAndKeys:
