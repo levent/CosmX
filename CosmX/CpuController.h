@@ -35,6 +35,7 @@
 
 - (NSString *)systemVersion;
 - (NSString *)cpuType;
+- (NSString *)cpuCount;
 - (NSString *)amountRam;
 
 -(void)updateCpuInfo:(id)sender;

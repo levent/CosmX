@@ -105,6 +105,12 @@
                                      @"os_version", @"id",
                                      nil];
         
+        // CPU Count
+        NSDictionary *cpuCount = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                 [self cpuCount], @"current_value",
+                                 @"cpu_count", @"id",
+                                 nil];
+        
         // CPU Type
         NSDictionary *cpuType = [[NSDictionary alloc] initWithObjectsAndKeys:
                                     [self cpuType], @"current_value",
@@ -125,6 +131,7 @@
         [myDatastreams addObject:totalRam];
         [myDatastreams addObject:sysVersion];
         [myDatastreams addObject:cpuType];
+        [myDatastreams addObject:cpuCount];
         
         NSString *title = [[NSString alloc] initWithFormat:@"System info (%@)", [[NSHost currentHost] localizedName]];
         NSArray *feedTags = [[NSArray alloc] initWithObjects:@"app:author=lebreeze", @"app:name=CosmX", nil];
@@ -188,6 +195,21 @@
         cpuBrandString = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
     }
     return [NSString stringWithFormat:@"%@", cpuBrandString];
+}
+
+- (NSString *)cpuCount
+{
+    int error = 0;
+    int value = 0;
+    size_t length = sizeof(value);
+    
+    NSString *cpuCount;
+    
+	error = sysctlbyname("hw.ncpu", &value, &length, NULL, 0);
+	if (error == 0) {
+        cpuCount = [NSString stringWithFormat:@"%@", [NSNumber numberWithInt:value]];
+    }
+    return cpuCount;
 }
 
 - (NSString *)amountRam
