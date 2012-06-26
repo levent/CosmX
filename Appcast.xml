@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="0.2">
+	<channel>
+		<title>CosmX's Changelog</title>
+		<link>https://raw.github.com/levent/CosmX/sparkle/Appcast.xml</link>
+		<description>Most recent changes with links to updates.</description>
+		<language>en</language>
+		<item>
+			<title>Version 0.2 (0 bugs fixed; 1 new features)</title>
+			<description><![CDATA[
+				<h2>New Features</h2>
+				Auto updater
+				]]></description>
+			<pubDate>Wed, 26 June 2012 20:20:11 +0000</pubDate>
+			<enclosure url="https://raw.github.com/levent/CosmX/sparkle/dist/CosmX_0.2.zip" sparkle:version="0.2" length="1623481" type="application/octet-stream" sparkle:dsaSignature="BAFJW4B6B1K1JyW30nbkBwainOzrN6EQuAh"/>
+		</item>
+	</channel>
+</rss>

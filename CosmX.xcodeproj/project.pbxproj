@@ -13,6 +13,8 @@
 		2B0767F8158B94870007B36D /* cosm.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2B0767F7158B94870007B36D /* cosm.icns */; };
 		2B0767FA158B94C80007B36D /* CosmXIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2B0767F9158B94C80007B36D /* CosmXIcon.icns */; };
 		2B0767FC158B94D70007B36D /* CosmXIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2B0767FB158B94D70007B36D /* CosmXIcon.icns */; };
+		2B3C5C55159A3F230006C15C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3C5C54159A3F230006C15C /* Sparkle.framework */; };
+		2B3C5C58159A402C0006C15C /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2B3C5C54159A3F230006C15C /* Sparkle.framework */; };
 		2B62E869152EE674001E776B /* logo-stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B62E868152EE674001E776B /* logo-stamp.png */; };
 		2B62E86C152EED2E001E776B /* logo-stamp-bw.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B62E86B152EED2D001E776B /* logo-stamp-bw.png */; };
 		2BCF2E171475A4A200F2E573 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCF2E161475A4A200F2E573 /* Cocoa.framework */; };
@@ -40,6 +42,19 @@
 		2BCF2E721476615C00F2E573 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E661476615C00F2E573 /* SBJsonWriter.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2B3C5C57159A40090006C15C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2B3C5C58159A402C0006C15C /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2B02B99F14A8933A00F8F6E5 /* ApplicationTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationTemplate.h; sourceTree = "<group>"; };
 		2B02B9A014A8933A00F8F6E5 /* ApplicationTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationTemplate.m; sourceTree = "<group>"; };
@@ -48,6 +63,7 @@
 		2B0767F7158B94870007B36D /* cosm.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = cosm.icns; path = ../cosm.icns; sourceTree = "<group>"; };
 		2B0767F9158B94C80007B36D /* CosmXIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CosmXIcon.icns; sourceTree = "<group>"; };
 		2B0767FB158B94D70007B36D /* CosmXIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CosmXIcon.icns; sourceTree = "<group>"; };
+		2B3C5C54159A3F230006C15C /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		2B62E868152EE674001E776B /* logo-stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-stamp.png"; sourceTree = "<group>"; };
 		2B62E86B152EED2D001E776B /* logo-stamp-bw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-stamp-bw.png"; sourceTree = "<group>"; };
 		2BCF2E121475A4A200F2E573 /* CosmX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CosmX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BCF2E171475A4A200F2E573 /* Cocoa.framework in Frameworks */,
+				2B3C5C55159A3F230006C15C /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +149,7 @@
 		2BCF2E151475A4A200F2E573 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B3C5C54159A3F230006C15C /* Sparkle.framework */,
 				2BCF2E161475A4A200F2E573 /* Cocoa.framework */,
 				2BCF2E181475A4A200F2E573 /* Other Frameworks */,
 			);
@@ -221,6 +239,7 @@
 				2BCF2E0E1475A4A200F2E573 /* Sources */,
 				2BCF2E0F1475A4A200F2E573 /* Frameworks */,
 				2BCF2E101475A4A200F2E573 /* Resources */,
+				2B3C5C57159A40090006C15C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -392,6 +411,10 @@
 		2BCF2E341475A4A200F2E573 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CosmX/CosmX-Prefix.pch";
 				INFOPLIST_FILE = "CosmX/CosmX-Info.plist";
@@ -403,6 +426,10 @@
 		2BCF2E351475A4A200F2E573 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CosmX/CosmX-Prefix.pch";
 				INFOPLIST_FILE = "CosmX/CosmX-Info.plist";
