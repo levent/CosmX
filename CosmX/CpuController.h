@@ -33,7 +33,9 @@
     BOOL paused;
 }
 
-- (NSString *)systemVersionString;
+- (NSString *)systemVersion;
+- (NSString *)cpuType;
+- (NSString *)amountRam;
 
 -(void)updateCpuInfo:(id)sender;
 -(void)pause:(id)sender;

@@ -99,14 +99,32 @@
         }
         
         
-        // System Version String
-        
+        // System Version
         NSDictionary *sysVersion = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                     [self systemVersionString], @"current_value",
-                                     @"mac_os_version", @"id",
+                                     [self systemVersion], @"current_value",
+                                     @"os_version", @"id",
                                      nil];
         
+        // CPU Type
+        NSDictionary *cpuType = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                    [self cpuType], @"current_value",
+                                    @"cpu", @"id",
+                                    nil];
+
+        NSDictionary *ramUnits = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                  @"(MB)", @"symbol", 
+                                  @"Megabytes", @"label",
+                                  nil];
+        // Ram
+        NSDictionary *totalRam = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                 [self amountRam], @"current_value",
+                                 @"memory", @"id",
+                                  ramUnits, @"unit",
+                                 nil];
+        
+        [myDatastreams addObject:totalRam];
         [myDatastreams addObject:sysVersion];
+        [myDatastreams addObject:cpuType];
         
         NSString *title = [[NSString alloc] initWithFormat:@"System info (%@)", [[NSHost currentHost] localizedName]];
         NSArray *feedTags = [[NSArray alloc] initWithObjects:@"app:author=lebreeze", @"app:name=CosmX", nil];
@@ -130,7 +148,7 @@
 }
 
 
-- (NSString *)systemVersionString
+- (NSString *)systemVersion
 {
 	// This returns a version string of the form X.Y.Z
 	// There may be a better way to deal with the problem that gestaltSystemVersionMajor
@@ -154,4 +172,32 @@
 	return verStr;
 }
 
+- (NSString *)cpuType
+{
+    int error = 0;
+    char buf[100];
+    size_t buflen = 100;
+    
+    NSString *cpuBrandString;
+
+    
+    error = sysctlbyname("machdep.cpu.brand_string", &buf, &buflen, NULL, 0);
+
+    if (error == 0)
+    {
+        cpuBrandString = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
+    }
+    return [NSString stringWithFormat:@"%@", cpuBrandString];
+}
+
+- (NSString *)amountRam
+{
+    NSString *ram;
+    SInt32 gestaltInfo;
+	OSErr err = Gestalt(gestaltPhysicalRAMSizeInMegabytes,&gestaltInfo);
+    if (err == noErr) {
+        ram = [NSString stringWithFormat:@"%@", [NSNumber numberWithInt:gestaltInfo]];
+    }
+    return ram;
+}
 @end
