@@ -35,6 +35,6 @@
 	<key>NSPrincipalClass</key>
 	<string>ApplicationTemplate</string>
 	<key>SUFeedURL</key>
-	<string>https://raw.github.com/levent/CosmX/sparkle/Appcast.xml</string>
+	<string>https://raw.github.com/levent/CosmX/master/Appcast.xml</string>
 </dict>
 </plist>
