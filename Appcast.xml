@@ -12,7 +12,7 @@
 				Auto updater
 				]]></description>
 			<pubDate>Wed, 26 June 2012 20:20:11 +0000</pubDate>
-			<enclosure url="https://raw.github.com/levent/CosmX/sparkle/dist/CosmX_0.2.zip" sparkle:version="0.2" length="1623481" type="application/octet-stream" sparkle:dsaSignature="BAFJW4B6B1K1JyW30nbkBwainOzrN6EQuAh"/>
+			<enclosure url="https://raw.github.com/levent/CosmX/sparkle/dist/CosmX_0.2.zip" sparkle:version="0.2" length="815082" type="application/octet-stream"/>
 		</item>
 	</channel>
 </rss>
