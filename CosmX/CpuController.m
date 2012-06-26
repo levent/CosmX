@@ -46,36 +46,6 @@
         // RAM bunk
         struct task_basic_info info;
         sizeRam = sizeof(info);
-        kern_return_t kerr = task_info(mach_task_self(), TASK_BASIC_INFO, (task_info_t)&info, &sizeRam);
-
-        
-        
-        
-        
-    //    mach_port_t host_port;
-    //    mach_msg_type_number_t host_size;
-    //    vm_size_t pagesize;
-    //    
-    //    
-    //    host_port = mach_host_self();
-    //    host_size = sizeof(vm_statistics_data_t) / sizeof(integer_t);
-    //    host_page_size(host_port, &pagesize);        
-    //    
-    //    vm_statistics_data_t vm_stat;
-    //    
-    //    if (host_statistics(host_port, HOST_VM_INFO, (host_info_t)&vm_stat, &host_size) != KERN_SUCCESS)
-    //        NSLog(@"Failed to fetch vm statistics");
-    //    
-    //    /* Stats in bytes */ 
-    //    natural_t mem_used = (vm_stat.active_count +
-    //                          vm_stat.inactive_count +
-    //                          vm_stat.wire_count) * pagesize;
-    //    natural_t mem_free = vm_stat.free_count * pagesize;
-    //    natural_t mem_total = mem_used + mem_free;
-    //    NSLog(@"used: %u free: %u total: %u", mem_used, mem_free, mem_total);
-    //    
-        
-        
 
         if(err == KERN_SUCCESS) {
             [CPUUsageLock lock];
@@ -127,21 +97,16 @@
             NSLog(@"Error!");
             [NSApp terminate:nil];
         }
-
-
-// Use for debugging memory
-//        if(kerr == KERN_SUCCESS) {
-//            NSString *currentValue = [[NSString alloc] initWithFormat:@"%u", info.resident_size];
-//            NSString *streamId = [[NSString alloc] initWithFormat:@"memory"];
-//            
-//            NSDictionary *aDatastream = [[NSDictionary alloc] initWithObjectsAndKeys:
-//                                         currentValue, @"current_value",
-//                                         streamId, @"id",
-//                                         @"memory", @"tags",
-//                                         nil];
-//            
-//            [myDatastreams addObject:aDatastream];
-//        }
+        
+        
+        // System Version String
+        
+        NSDictionary *sysVersion = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                     [self systemVersionString], @"current_value",
+                                     @"mac_os_version", @"id",
+                                     nil];
+        
+        [myDatastreams addObject:sysVersion];
         
         NSString *title = [[NSString alloc] initWithFormat:@"System info (%@)", [[NSHost currentHost] localizedName]];
         NSArray *feedTags = [[NSArray alloc] initWithObjects:@"app:author=lebreeze", @"app:name=CosmX", nil];
@@ -164,5 +129,29 @@
     }
 }
 
+
+- (NSString *)systemVersionString
+{
+	// This returns a version string of the form X.Y.Z
+	// There may be a better way to deal with the problem that gestaltSystemVersionMajor
+	//  et al. are not defined in 10.3, but this is probably good enough.
+	NSString* verStr = nil;
+#if MAC_OS_X_VERSION_MIN_REQUIRED >= MAC_OS_X_VERSION_10_4
+	SInt32 major, minor, bugfix;
+	OSErr err1 = Gestalt(gestaltSystemVersionMajor, &major);
+	OSErr err2 = Gestalt(gestaltSystemVersionMinor, &minor);
+	OSErr err3 = Gestalt(gestaltSystemVersionBugFix, &bugfix);
+	if (!err1 && !err2 && !err3)
+	{
+		verStr = [NSString stringWithFormat:@"%ld.%ld.%ld", (long)major, (long)minor, (long)bugfix];
+	}
+	else
+#endif
+	{
+	 	NSString *versionPlistPath = @"/System/Library/CoreServices/SystemVersion.plist";
+		verStr = [[NSDictionary dictionaryWithContentsOfFile:versionPlistPath] objectForKey:@"ProductVersion"];
+	}
+	return verStr;
+}
 
 @end

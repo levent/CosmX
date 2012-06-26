@@ -14,7 +14,6 @@
 #include <mach/processor_info.h>
 #include <mach/mach_host.h>
 
-
 @interface CpuController : NSObject {
     processor_info_array_t cpuInfo, prevCpuInfo;
     mach_msg_type_number_t numCpuInfo, numPrevCpuInfo, sizeRam;
@@ -33,6 +32,8 @@
     
     BOOL paused;
 }
+
+- (NSString *)systemVersionString;
 
 -(void)updateCpuInfo:(id)sender;
 -(void)pause:(id)sender;
