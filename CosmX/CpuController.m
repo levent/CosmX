@@ -133,7 +133,7 @@
         [myDatastreams addObject:cpuType];
         [myDatastreams addObject:cpuCount];
         
-        NSString *title = [[NSString alloc] initWithFormat:@"System info (%@)", [[NSHost currentHost] localizedName]];
+        NSString *title = [[NSString alloc] initWithFormat:@"CosmX System Info (%@)", [[NSHost currentHost] localizedName]];
         NSArray *feedTags = [[NSArray alloc] initWithObjects:@"app:author=lebreeze", @"app:name=CosmX", nil];
         NSDictionary *feed = [[NSDictionary alloc] initWithObjectsAndKeys:
                                 title, @"title",
