@@ -6,7 +6,7 @@ All you need is to create an empty feed on Cosm and to have an api key that can 
 
 ## Installer
 
-### [Download from Github](https://github.com/downloads/levent/CosmX/CosmX%2020120619.dmg)
+### [Download from Github](https://github.com/downloads/levent/CosmX/CosmX_0.2.dmg)
 
 ## Sample Feeds
 
