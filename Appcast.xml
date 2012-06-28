@@ -59,6 +59,14 @@
 			<pubDate>Wed, 28 June 2012 07:10:00 +0000</pubDate>
 			<enclosure url="https://raw.github.com/levent/CosmX/master/dist/CosmX_0.6.zip" sparkle:version="0.6" length="816352" type="application/octet-stream"/>
 		</item>
+		<item>
+			<title>Version 0.8</title>
+			<description><![CDATA[
+				<h2>Bug Fixes</h2>
+            ]]></description>
+			<pubDate>Wed, 28 June 2012 15:25:00 +0000</pubDate>
+			<enclosure url="https://raw.github.com/levent/CosmX/master/dist/CosmX_0.8.zip" sparkle:version="0.8" length="815274" type="application/octet-stream"/>
+		</item>
 	</channel>
 </rss>
 
