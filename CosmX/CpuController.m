@@ -21,10 +21,10 @@
     CPUUsageLock = [[NSLock alloc] init];
     
     updateTimer = [NSTimer scheduledTimerWithTimeInterval:10
-                                                    target:self
-                                                  selector:@selector(updateInfo:)
-                                                  userInfo:nil
-                                                   repeats:YES];    
+                                                   target:self
+                                                 selector:@selector(updateInfo:)
+                                                 userInfo:nil
+                                                  repeats:YES];    
 }
 
 - (void)pause:(id)sender {
@@ -46,11 +46,11 @@
         // RAM bunk
         struct task_basic_info info;
         sizeRam = sizeof(info);
-
+        
         if(err == KERN_SUCCESS) {
             [CPUUsageLock lock];
             
-
+            
             
             for(unsigned i = 0U; i < numCPUs; ++i) {
                 float inUse, total;
@@ -73,12 +73,12 @@
                                                   @"Percent", @"label",
                                                   nil];
                 NSDictionary *aDatastream = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                                  currentValue, @"current_value",
-                                                  streamId, @"id",
-                                                  @"cpu", @"tags",
-                                                  aDatastreamUnits, @"unit",
-                                                  nil];
-
+                                             currentValue, @"current_value",
+                                             streamId, @"id",
+                                             @"cpu", @"tags",
+                                             aDatastreamUnits, @"unit",
+                                             nil];
+                
                 [myDatastreams insertObject:aDatastream atIndex:i];
             }
             [CPUUsageLock unlock];
@@ -98,54 +98,42 @@
             [NSApp terminate:nil];
         }
         
-        
-        // System Version
-        NSDictionary *sysVersion = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                     [self systemVersion], @"current_value",
-                                     @"os_version", @"id",
-                                     nil];
-        
         // CPU Count
         NSDictionary *cpuCount = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                 [self cpuCount], @"current_value",
-                                 @"cpu_count", @"id",
-                                 nil];
-        
-        // CPU Type
-        NSDictionary *cpuType = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                    [self cpuType], @"current_value",
-                                    @"cpu_info", @"id",
-                                    nil];
-
+                                  [self cpuCount], @"current_value",
+                                  @"cpu_count", @"id",
+                                  nil];
+                
         NSDictionary *ramUnits = [[NSDictionary alloc] initWithObjectsAndKeys:
                                   @"(MB)", @"symbol", 
                                   @"Megabytes", @"label",
                                   nil];
         // Ram
         NSDictionary *totalRam = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                 [self amountRam], @"current_value",
-                                 @"memory", @"id",
+                                  [self amountRam], @"current_value",
+                                  @"total_memory", @"id",
                                   ramUnits, @"unit",
-                                 nil];
+                                  nil];
         
         [myDatastreams addObject:totalRam];
-        [myDatastreams addObject:sysVersion];
-        [myDatastreams addObject:cpuType];
         [myDatastreams addObject:cpuCount];
         
         NSString *title = [[NSString alloc] initWithFormat:@"CosmX System Info (%@)", [[NSHost currentHost] localizedName]];
-        NSArray *feedTags = [[NSArray alloc] initWithObjects:@"app:author=lebreeze", @"app:name=CosmX", nil];
+        NSString *description = [[NSString alloc] initWithFormat:@"%@", [self cpuType]];
+        NSString *osVersionTag = [[NSString alloc] initWithFormat:@"os:version=%@", [self systemVersion]];
+        NSArray *feedTags = [[NSArray alloc] initWithObjects:@"app:author=lebreeze", @"app:name=CosmX", osVersionTag, @"os:type=osx", nil];
         NSDictionary *feed = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                title, @"title",
-                                feedTags, @"tags",
-                                myDatastreams,@"datastreams",
-                                @"1.0.0", @"version",
-                                nil];
+                              title, @"title",
+                              description, @"description",
+                              feedTags, @"tags",
+                              myDatastreams,@"datastreams",
+                              @"1.0.0", @"version",
+                              nil];
         
         feedId = [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"];
         apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
         url = [[NSString alloc] initWithFormat:@"http://api.cosm.com/v2/feeds/%@.json?key=%@", feedId, apiKey];
-
+        
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
         [request setHTTPMethod:@"PUT"];
         NSString *postString = [jsonWriter stringWithObject:feed];
@@ -186,10 +174,10 @@
     size_t buflen = 100;
     
     NSString *cpuBrandString;
-
+    
     
     error = sysctlbyname("machdep.cpu.brand_string", &buf, &buflen, NULL, 0);
-
+    
     if (error == 0)
     {
         cpuBrandString = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];

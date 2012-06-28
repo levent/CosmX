@@ -37,5 +37,16 @@
 			<pubDate>Wed, 27 June 2012 09:37:00 +0000</pubDate>
 			<enclosure url="https://raw.github.com/levent/CosmX/master/dist/CosmX_0.4.zip" sparkle:version="0.4" length="815013" type="application/octet-stream"/>
 		</item>
+		<item>
+			<title>Version 0.5</title>
+			<description><![CDATA[
+				<h2>Data restructured</h2>
+        OS Info moved into tags
+        General system infor moved into description
+        'memory' datastream relabeled 'total_memory'
+				]]></description>
+			<pubDate>Wed, 28 June 2012 06:45:00 +0000</pubDate>
+			<enclosure url="https://raw.github.com/levent/CosmX/master/dist/CosmX_0.5.zip" sparkle:version="0.5" length="814984" type="application/octet-stream"/>
+		</item>
 	</channel>
 </rss>
