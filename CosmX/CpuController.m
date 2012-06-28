@@ -35,6 +35,38 @@
     paused = NO;    
 }
 
+- (NSDictionary *)cpuDatastreamUnits
+{
+    return [[NSDictionary alloc] initWithObjectsAndKeys:
+     @"%", @"symbol", 
+     @"Percent", @"label",
+     nil];
+}
+
+- (NSDictionary *)ramUnits
+{
+    return [[NSDictionary alloc] initWithObjectsAndKeys:
+            @"(MB)", @"symbol", 
+            @"Megabytes", @"label",
+            nil];
+}
+
+- (NSString *)feedTitle
+{
+    return [[NSString alloc] initWithFormat:@"CosmX System Info (%@)", [[NSHost currentHost] localizedName]];
+}
+
+- (NSString *)feedDescription
+{
+    return [[NSString alloc] initWithFormat:@"%@\r\n\r\nhttps://github.com/levent/CosmX", [self cpuType]];
+}
+
+- (NSArray *)feedTags
+{
+    NSString *osVersionTag = [[NSString alloc] initWithFormat:@"os:version=%@", [self systemVersion]];
+    return [[NSArray alloc] initWithObjects:@"app:author=lebreeze", @"app:name=CosmX", osVersionTag, @"os:type=osx", nil];
+}
+
 - (void)updateInfo:(NSTimer *)timer
 {
     if(!paused) {
@@ -68,15 +100,11 @@
                 
                 NSString *currentValue = [[NSString alloc] initWithFormat:@"%.2f", (inUse / total) * 100.0];
                 NSString *streamId = [[NSString alloc] initWithFormat:@"cpu_%i", i];
-                NSDictionary *aDatastreamUnits = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                                  @"%", @"symbol", 
-                                                  @"Percent", @"label",
-                                                  nil];
                 NSDictionary *aDatastream = [[NSDictionary alloc] initWithObjectsAndKeys:
                                              currentValue, @"current_value",
                                              streamId, @"id",
                                              @"cpu", @"tags",
-                                             aDatastreamUnits, @"unit",
+                                             [self cpuDatastreamUnits], @"unit",
                                              nil];
                 
                 [myDatastreams insertObject:aDatastream atIndex:i];
@@ -103,30 +131,21 @@
                                   [self cpuCount], @"current_value",
                                   @"cpu_count", @"id",
                                   nil];
-                
-        NSDictionary *ramUnits = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                  @"(MB)", @"symbol", 
-                                  @"Megabytes", @"label",
-                                  nil];
-        // Ram
+        
+        // Total RAM
         NSDictionary *totalRam = [[NSDictionary alloc] initWithObjectsAndKeys:
                                   [self totalRam], @"current_value",
                                   @"total_memory", @"id",
-                                  ramUnits, @"unit",
+                                  [self ramUnits], @"unit",
                                   nil];
         
         [myDatastreams addObject:totalRam];
         [myDatastreams addObject:cpuCount];
-//        NSLog([self usedRam]);
         
-        NSString *title = [[NSString alloc] initWithFormat:@"CosmX System Info (%@)", [[NSHost currentHost] localizedName]];
-        NSString *description = [[NSString alloc] initWithFormat:@"%@\r\n\r\nhttps://github.com/levent/CosmX", [self cpuType]];
-        NSString *osVersionTag = [[NSString alloc] initWithFormat:@"os:version=%@", [self systemVersion]];
-        NSArray *feedTags = [[NSArray alloc] initWithObjects:@"app:author=lebreeze", @"app:name=CosmX", osVersionTag, @"os:type=osx", nil];
         NSDictionary *feed = [[NSDictionary alloc] initWithObjectsAndKeys:
-                              title, @"title",
-                              description, @"description",
-                              feedTags, @"tags",
+                              [self feedTitle], @"title",
+                              [self feedDescription], @"description",
+                              [self feedTags], @"tags",
                               myDatastreams,@"datastreams",
                               @"1.0.0", @"version",
                               nil];
@@ -146,9 +165,6 @@
 
 - (NSString *)systemVersion
 {
-	// This returns a version string of the form X.Y.Z
-	// There may be a better way to deal with the problem that gestaltSystemVersionMajor
-	//  et al. are not defined in 10.3, but this is probably good enough.
 	NSString* verStr = nil;
 #if MAC_OS_X_VERSION_MIN_REQUIRED >= MAC_OS_X_VERSION_10_4
 	SInt32 major, minor, bugfix;
@@ -175,7 +191,6 @@
     size_t buflen = 100;
     
     NSString *cpuBrandString;
-    
     
     error = sysctlbyname("machdep.cpu.brand_string", &buf, &buflen, NULL, 0);
     
@@ -212,39 +227,40 @@
     return ram;
 }
 
-- (NSString *)usedRam
-{
-    int mib[6]; 
-    mib[0] = CTL_HW;
-    mib[1] = HW_PAGESIZE;
-    
-    int pagesize;
-    size_t length;
-    length = sizeof (pagesize);
-    if (sysctl (mib, 2, &pagesize, &length, NULL, 0) < 0)
-    {
-        fprintf (stderr, "getting page size");
-    }
-    
-    mach_msg_type_number_t count = HOST_VM_INFO_COUNT;
-    
-    vm_statistics_data_t vmstat;
-    if (host_statistics (mach_host_self (), HOST_VM_INFO, (host_info_t) &vmstat, &count) != KERN_SUCCESS)
-    {
-        fprintf (stderr, "Failed to get VM statistics.");
-    }
-    
-    double total = vmstat.wire_count + vmstat.active_count + vmstat.inactive_count + vmstat.free_count;
-    double wired = vmstat.wire_count / total;
-    double active = vmstat.active_count / total;
-    double inactive = vmstat.inactive_count / total;
-    double free = vmstat.free_count / total;
-    
-    task_basic_info_64_data_t info;
-    unsigned size = sizeof (info);
-    task_info (mach_task_self (), TASK_BASIC_INFO_64, (task_info_t) &info, &size);
-    
-    double unit = 1024 * 1024;
-    return [NSString stringWithFormat: @"% 3.1f MB\n% 3.1f MB\n% 3.1f MB", vmstat.free_count * pagesize / unit, (vmstat.free_count + vmstat.inactive_count) * pagesize / unit, info.resident_size / unit];
-}
+// TODO: Make this work
+//- (NSString *)usedRam
+//{
+//    int mib[6]; 
+//    mib[0] = CTL_HW;
+//    mib[1] = HW_PAGESIZE;
+//    
+//    int pagesize;
+//    size_t length;
+//    length = sizeof (pagesize);
+//    if (sysctl (mib, 2, &pagesize, &length, NULL, 0) < 0)
+//    {
+//        fprintf (stderr, "getting page size");
+//    }
+//    
+//    mach_msg_type_number_t count = HOST_VM_INFO_COUNT;
+//    
+//    vm_statistics_data_t vmstat;
+//    if (host_statistics (mach_host_self (), HOST_VM_INFO, (host_info_t) &vmstat, &count) != KERN_SUCCESS)
+//    {
+//        fprintf (stderr, "Failed to get VM statistics.");
+//    }
+//    
+//    double total = vmstat.wire_count + vmstat.active_count + vmstat.inactive_count + vmstat.free_count;
+//    double wired = vmstat.wire_count / total;
+//    double active = vmstat.active_count / total;
+//    double inactive = vmstat.inactive_count / total;
+//    double free = vmstat.free_count / total;
+//    
+//    task_basic_info_64_data_t info;
+//    unsigned size = sizeof (info);
+//    task_info (mach_task_self (), TASK_BASIC_INFO_64, (task_info_t) &info, &size);
+//    
+//    double unit = 1024 * 1024;
+//    return [NSString stringWithFormat: @"% 3.1f MB\n% 3.1f MB\n% 3.1f MB", vmstat.free_count * pagesize / unit, (vmstat.free_count + vmstat.inactive_count) * pagesize / unit, info.resident_size / unit];
+//}
 @end

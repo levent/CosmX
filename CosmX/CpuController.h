@@ -37,7 +37,13 @@
 - (NSString *)cpuType;
 - (NSString *)cpuCount;
 - (NSString *)totalRam;
-- (NSString *)usedRam;
+//- (NSString *)usedRam;
+- (NSString *)feedTitle;
+- (NSString *)feedDescription;
+- (NSArray *)feedTags;
+
+- (NSDictionary *)cpuDatastreamUnits;
+- (NSDictionary *)ramUnits;
 
 -(void)updateCpuInfo:(id)sender;
 -(void)pause:(id)sender;
