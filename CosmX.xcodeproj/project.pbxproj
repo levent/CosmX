@@ -13,7 +13,6 @@
 		2B0767F8158B94870007B36D /* cosm.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2B0767F7158B94870007B36D /* cosm.icns */; };
 		2B0767FA158B94C80007B36D /* CosmXIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2B0767F9158B94C80007B36D /* CosmXIcon.icns */; };
 		2B0767FC158B94D70007B36D /* CosmXIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2B0767FB158B94D70007B36D /* CosmXIcon.icns */; };
-		2B2A3586159C2CCE004C0570 /* Appcast.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2B2A3585159C2CCE004C0570 /* Appcast.xml */; };
 		2B3C5C55159A3F230006C15C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3C5C54159A3F230006C15C /* Sparkle.framework */; };
 		2B3C5C58159A402C0006C15C /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2B3C5C54159A3F230006C15C /* Sparkle.framework */; };
 		2B62E869152EE674001E776B /* logo-stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B62E868152EE674001E776B /* logo-stamp.png */; };
@@ -64,7 +63,6 @@
 		2B0767F7158B94870007B36D /* cosm.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = cosm.icns; path = ../cosm.icns; sourceTree = "<group>"; };
 		2B0767F9158B94C80007B36D /* CosmXIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CosmXIcon.icns; sourceTree = "<group>"; };
 		2B0767FB158B94D70007B36D /* CosmXIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CosmXIcon.icns; sourceTree = "<group>"; };
-		2B2A3585159C2CCE004C0570 /* Appcast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Appcast.xml; sourceTree = "<group>"; };
 		2B3C5C54159A3F230006C15C /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		2B62E868152EE674001E776B /* logo-stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-stamp.png"; sourceTree = "<group>"; };
 		2B62E86B152EED2D001E776B /* logo-stamp-bw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-stamp-bw.png"; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 		2BCF2E1D1475A4A200F2E573 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2B2A3585159C2CCE004C0570 /* Appcast.xml */,
 				2B0767F9158B94C80007B36D /* CosmXIcon.icns */,
 				2B0767F7158B94870007B36D /* cosm.icns */,
 				2B0767F1158B94510007B36D /* cosm-feed-viewer2.icns */,
@@ -294,7 +291,6 @@
 				2B0767F8158B94870007B36D /* cosm.icns in Resources */,
 				2B0767FA158B94C80007B36D /* CosmXIcon.icns in Resources */,
 				2B0767FC158B94D70007B36D /* CosmXIcon.icns in Resources */,
-				2B2A3586159C2CCE004C0570 /* Appcast.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
