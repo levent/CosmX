@@ -110,16 +110,17 @@
                                   nil];
         // Ram
         NSDictionary *totalRam = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                  [self amountRam], @"current_value",
+                                  [self totalRam], @"current_value",
                                   @"total_memory", @"id",
                                   ramUnits, @"unit",
                                   nil];
         
         [myDatastreams addObject:totalRam];
         [myDatastreams addObject:cpuCount];
+//        NSLog([self usedRam]);
         
         NSString *title = [[NSString alloc] initWithFormat:@"CosmX System Info (%@)", [[NSHost currentHost] localizedName]];
-        NSString *description = [[NSString alloc] initWithFormat:@"%@", [self cpuType]];
+        NSString *description = [[NSString alloc] initWithFormat:@"%@\r\n\r\nhttps://github.com/levent/CosmX", [self cpuType]];
         NSString *osVersionTag = [[NSString alloc] initWithFormat:@"os:version=%@", [self systemVersion]];
         NSArray *feedTags = [[NSArray alloc] initWithObjects:@"app:author=lebreeze", @"app:name=CosmX", osVersionTag, @"os:type=osx", nil];
         NSDictionary *feed = [[NSDictionary alloc] initWithObjectsAndKeys:
@@ -200,7 +201,7 @@
     return cpuCount;
 }
 
-- (NSString *)amountRam
+- (NSString *)totalRam
 {
     NSString *ram;
     SInt32 gestaltInfo;
@@ -209,5 +210,41 @@
         ram = [NSString stringWithFormat:@"%@", [NSNumber numberWithInt:gestaltInfo]];
     }
     return ram;
+}
+
+- (NSString *)usedRam
+{
+    int mib[6]; 
+    mib[0] = CTL_HW;
+    mib[1] = HW_PAGESIZE;
+    
+    int pagesize;
+    size_t length;
+    length = sizeof (pagesize);
+    if (sysctl (mib, 2, &pagesize, &length, NULL, 0) < 0)
+    {
+        fprintf (stderr, "getting page size");
+    }
+    
+    mach_msg_type_number_t count = HOST_VM_INFO_COUNT;
+    
+    vm_statistics_data_t vmstat;
+    if (host_statistics (mach_host_self (), HOST_VM_INFO, (host_info_t) &vmstat, &count) != KERN_SUCCESS)
+    {
+        fprintf (stderr, "Failed to get VM statistics.");
+    }
+    
+    double total = vmstat.wire_count + vmstat.active_count + vmstat.inactive_count + vmstat.free_count;
+    double wired = vmstat.wire_count / total;
+    double active = vmstat.active_count / total;
+    double inactive = vmstat.inactive_count / total;
+    double free = vmstat.free_count / total;
+    
+    task_basic_info_64_data_t info;
+    unsigned size = sizeof (info);
+    task_info (mach_task_self (), TASK_BASIC_INFO_64, (task_info_t) &info, &size);
+    
+    double unit = 1024 * 1024;
+    return [NSString stringWithFormat: @"% 3.1f MB\n% 3.1f MB\n% 3.1f MB", vmstat.free_count * pagesize / unit, (vmstat.free_count + vmstat.inactive_count) * pagesize / unit, info.resident_size / unit];
 }
 @end
