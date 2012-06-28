@@ -63,8 +63,11 @@
 
 - (NSArray *)feedTags
 {
+    NSBundle* mainBundle;
+    mainBundle = [NSBundle mainBundle];
     NSString *osVersionTag = [[NSString alloc] initWithFormat:@"os:version=%@", [self systemVersion]];
-    return [[NSArray alloc] initWithObjects:@"app:author=lebreeze", @"app:name=CosmX", osVersionTag, @"os:type=osx", nil];
+    NSString *cosmxVersionTag = [[NSString alloc] initWithFormat:@"app:version=%@", [mainBundle objectForInfoDictionaryKey:@"CFBundleVersion"]];
+    return [[NSArray alloc] initWithObjects:@"app:author=lebreeze", @"app:name=CosmX", cosmxVersionTag, osVersionTag, @"os:type=osx", nil];
 }
 
 - (void)updateInfo:(NSTimer *)timer
