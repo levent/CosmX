@@ -19,7 +19,6 @@
         numCPUs = 1;
     
     CPUUsageLock = [[NSLock alloc] init];
-    
     updateTimer = [NSTimer scheduledTimerWithTimeInterval:10
                                                    target:self
                                                  selector:@selector(updateInfo:)
@@ -162,9 +161,36 @@
         NSString *postString = [jsonWriter stringWithObject:feed];
         [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
         connectionCosm = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        NSManagedObjectContext *context = [[NSApp delegate] managedObjectContext];
+        NSManagedObject *feedUpdate = nil;
+        feedUpdate = [NSEntityDescription insertNewObjectForEntityForName:@"FeedUpdate" inManagedObjectContext:context];
+        [feedUpdate setValue: postString forKey:@"content"];
+        [feedUpdate setValue: [NSDate date] forKey:@"timestamp"];
     }
 }
 
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    responseData = [[NSMutableData alloc] init];
+    responseHeaders = [(NSHTTPURLResponse *)response allHeaderFields];
+    NSLog(@"headers: %@", [responseHeaders description]);
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [responseData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"fail");
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection 
+{
+    NSLog(@"Succeeded! Received %lu bytes of data",[responseData
+                                                   length]);
+    NSString *txt = [[NSString alloc] initWithData:responseData encoding: NSASCIIStringEncoding];
+    
+}
 
 - (NSString *)systemVersion
 {

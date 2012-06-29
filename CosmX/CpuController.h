@@ -28,6 +28,8 @@
     NSString *apiKey;
     NSString *url;
     
+    NSMutableData *responseData;
+    NSDictionary *responseHeaders;
     NSURLConnection *connectionCosm;
     
     BOOL paused;

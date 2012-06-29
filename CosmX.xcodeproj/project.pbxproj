@@ -13,6 +13,8 @@
 		2B0767F8158B94870007B36D /* cosm.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2B0767F7158B94870007B36D /* cosm.icns */; };
 		2B0767FA158B94C80007B36D /* CosmXIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2B0767F9158B94C80007B36D /* CosmXIcon.icns */; };
 		2B0767FC158B94D70007B36D /* CosmXIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2B0767FB158B94D70007B36D /* CosmXIcon.icns */; };
+		2B1ACF1E159DF5F4004C0199 /* CosmX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACF1C159DF5F4004C0199 /* CosmX.xcdatamodeld */; };
+		2B1ACF24159DF6AF004C0199 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCF2E1A1475A4A200F2E573 /* CoreData.framework */; };
 		2B3C5C55159A3F230006C15C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3C5C54159A3F230006C15C /* Sparkle.framework */; };
 		2B3C5C58159A402C0006C15C /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2B3C5C54159A3F230006C15C /* Sparkle.framework */; };
 		2B62E869152EE674001E776B /* logo-stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B62E868152EE674001E776B /* logo-stamp.png */; };
@@ -23,7 +25,6 @@
 		2BCF2E271475A4A200F2E573 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2BCF2E251475A4A200F2E573 /* Credits.rtf */; };
 		2BCF2E2A1475A4A200F2E573 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E291475A4A200F2E573 /* AppDelegate.m */; };
 		2BCF2E2D1475A4A200F2E573 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BCF2E2B1475A4A200F2E573 /* MainMenu.xib */; };
-		2BCF2E301475A4A200F2E573 /* CosmX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E2E1475A4A200F2E573 /* CosmX.xcdatamodeld */; };
 		2BCF2E3C147644A100F2E573 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E3B147644A100F2E573 /* AppController.m */; };
 		2BCF2E40147644D000F2E573 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF2E3F147644D000F2E573 /* PreferencesController.m */; };
 		2BCF2E43147644E400F2E573 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BCF2E41147644E400F2E573 /* Preferences.xib */; };
@@ -63,6 +64,7 @@
 		2B0767F7158B94870007B36D /* cosm.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = cosm.icns; path = ../cosm.icns; sourceTree = "<group>"; };
 		2B0767F9158B94C80007B36D /* CosmXIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CosmXIcon.icns; sourceTree = "<group>"; };
 		2B0767FB158B94D70007B36D /* CosmXIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CosmXIcon.icns; sourceTree = "<group>"; };
+		2B1ACF1D159DF5F4004C0199 /* CosmX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CosmX.xcdatamodel; sourceTree = "<group>"; };
 		2B3C5C54159A3F230006C15C /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		2B62E868152EE674001E776B /* logo-stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-stamp.png"; sourceTree = "<group>"; };
 		2B62E86B152EED2D001E776B /* logo-stamp-bw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-stamp-bw.png"; sourceTree = "<group>"; };
@@ -79,7 +81,6 @@
 		2BCF2E281475A4A200F2E573 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BCF2E291475A4A200F2E573 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2BCF2E2C1475A4A200F2E573 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		2BCF2E2F1475A4A200F2E573 /* CosmX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CosmX.xcdatamodel; sourceTree = "<group>"; };
 		2BCF2E3A147644A100F2E573 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		2BCF2E3B147644A100F2E573 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		2BCF2E3E147644D000F2E573 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
@@ -119,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B1ACF24159DF6AF004C0199 /* CoreData.framework in Frameworks */,
 				2BCF2E171475A4A200F2E573 /* Cocoa.framework in Frameworks */,
 				2B3C5C55159A3F230006C15C /* Sparkle.framework in Frameworks */,
 			);
@@ -183,7 +185,7 @@
 				2BCF2E3E147644D000F2E573 /* PreferencesController.h */,
 				2BCF2E3F147644D000F2E573 /* PreferencesController.m */,
 				2BCF2E41147644E400F2E573 /* Preferences.xib */,
-				2BCF2E2E1475A4A200F2E573 /* CosmX.xcdatamodeld */,
+				2B1ACF1C159DF5F4004C0199 /* CosmX.xcdatamodeld */,
 				2BCF2E1D1475A4A200F2E573 /* Supporting Files */,
 			);
 			path = CosmX;
@@ -303,7 +305,6 @@
 			files = (
 				2BCF2E231475A4A200F2E573 /* main.m in Sources */,
 				2BCF2E2A1475A4A200F2E573 /* AppDelegate.m in Sources */,
-				2BCF2E301475A4A200F2E573 /* CosmX.xcdatamodeld in Sources */,
 				2BCF2E3C147644A100F2E573 /* AppController.m in Sources */,
 				2BCF2E40147644D000F2E573 /* PreferencesController.m in Sources */,
 				2BCF2E4D147654B800F2E573 /* CpuController.m in Sources */,
@@ -320,6 +321,7 @@
 				2BCF2E711476615C00F2E573 /* SBJsonUTF8Stream.m in Sources */,
 				2BCF2E721476615C00F2E573 /* SBJsonWriter.m in Sources */,
 				2B02B9A114A8933A00F8F6E5 /* ApplicationTemplate.m in Sources */,
+				2B1ACF1E159DF5F4004C0199 /* CosmX.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,12 +464,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2BCF2E2E1475A4A200F2E573 /* CosmX.xcdatamodeld */ = {
+		2B1ACF1C159DF5F4004C0199 /* CosmX.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2BCF2E2F1475A4A200F2E573 /* CosmX.xcdatamodel */,
+				2B1ACF1D159DF5F4004C0199 /* CosmX.xcdatamodel */,
 			);
-			currentVersion = 2BCF2E2F1475A4A200F2E573 /* CosmX.xcdatamodel */;
+			currentVersion = 2B1ACF1D159DF5F4004C0199 /* CosmX.xcdatamodel */;
 			path = CosmX.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
