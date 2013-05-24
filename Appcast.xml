@@ -73,7 +73,7 @@
 				<h2>CosmX is now iXively</h2>
             ]]></description>
 			<pubDate>Fri, 24 May 2013 15:25:00 +0000</pubDate>
-			<enclosure url="https://raw.github.com/levent/iXively/master/dist/iXively_1.0.zip" sparkle:version="1.0" length="514675" type="application/octet-stream"/>
+			<enclosure url="https://raw.github.com/levent/iXively/master/dist/iXively_1.0.zip" sparkle:version="1.0" length="514055" type="application/octet-stream"/>
 		</item>
 	</channel>
 </rss>
