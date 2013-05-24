@@ -53,12 +53,12 @@
 
 - (NSString *)feedTitle
 {
-    return [[NSString alloc] initWithFormat:@"CosmX System Info (%@)", [[NSHost currentHost] localizedName]];
+    return [[NSString alloc] initWithFormat:@"iXively System Info (%@)", [[NSHost currentHost] localizedName]];
 }
 
 - (NSString *)feedDescription
 {
-    return [[NSString alloc] initWithFormat:@"%@\r\n\r\nhttps://github.com/levent/CosmX", [self cpuType]];
+    return [[NSString alloc] initWithFormat:@"%@\r\n\r\nhttps://github.com/levent/iXively", [self cpuType]];
 }
 
 - (NSArray *)feedTags
@@ -67,7 +67,7 @@
     mainBundle = [NSBundle mainBundle];
     NSString *osVersionTag = [[NSString alloc] initWithFormat:@"os:version=%@", [self systemVersion]];
     NSString *cosmxVersionTag = [[NSString alloc] initWithFormat:@"app:version=%@", [mainBundle objectForInfoDictionaryKey:@"CFBundleVersion"]];
-    return [[NSArray alloc] initWithObjects:@"app:author=lebreeze", @"app:name=CosmX", cosmxVersionTag, osVersionTag, @"os:type=osx", nil];
+    return [[NSArray alloc] initWithObjects:@"app:author=lebreeze", @"app:name=iXively", cosmxVersionTag, osVersionTag, @"os:type=osx", nil];
 }
 
 - (void)updateInfo:(NSTimer *)timer

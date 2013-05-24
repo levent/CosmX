@@ -17,11 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
 	<key>LSMinimumSystemVersion</key>
@@ -35,6 +35,6 @@
 	<key>NSPrincipalClass</key>
 	<string>ApplicationTemplate</string>
 	<key>SUFeedURL</key>
-	<string>https://raw.github.com/levent/CosmX/master/Appcast.xml</string>
+	<string>https://raw.github.com/levent/iXively/master/Appcast.xml</string>
 </dict>
 </plist>
