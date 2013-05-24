@@ -40,6 +40,7 @@
 //- (NSString *)usedRam;
 - (NSString *)feedTitle;
 - (NSString *)feedDescription;
+- (NSString *)feedWebsite;
 - (NSArray *)feedTags;
 
 - (NSDictionary *)cpuDatastreamUnits;

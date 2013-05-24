@@ -83,6 +83,14 @@
 			<pubDate>Fri, 24 May 2013 15:25:00 +0000</pubDate>
 			<enclosure url="https://raw.github.com/levent/iXively/master/dist/iXively_1.1.zip" sparkle:version="1.0" length="514050" type="application/octet-stream"/>
 		</item>
+		<item>
+			<title>Version 1.2</title>
+			<description><![CDATA[
+				<h2>Change more references to CosmX</h2>
+            ]]></description>
+			<pubDate>Fri, 24 May 2013 15:35:00 +0000</pubDate>
+			<enclosure url="https://raw.github.com/levent/iXively/master/dist/iXively_1.2.zip" sparkle:version="1.0" length="514145" type="application/octet-stream"/>
+		</item>
 	</channel>
 </rss>
 

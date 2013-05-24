@@ -61,6 +61,11 @@
     return [[NSString alloc] initWithFormat:@"%@\r\n\r\nhttps://github.com/levent/iXively", [self cpuType]];
 }
 
+- (NSString *)feedWebsite
+{
+    return [[NSString alloc] initWithFormat:@"https://github.com/levent/iXively"];
+}
+
 - (NSArray *)feedTags
 {
     NSBundle* mainBundle;
@@ -148,6 +153,7 @@
         NSDictionary *feed = [[NSDictionary alloc] initWithObjectsAndKeys:
                               [self feedTitle], @"title",
                               [self feedDescription], @"description",
+                              [self feedWebsite], @"website",
                               [self feedTags], @"tags",
                               myDatastreams,@"datastreams",
                               @"1.0.0", @"version",
