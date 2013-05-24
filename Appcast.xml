@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="0.2">
 	<channel>
-		<title>CosmX's Changelog</title>
-		<link>https://raw.github.com/levent/CosmX/master/Appcast.xml</link>
+		<title>iXively's Changelog</title>
+		<link>https://raw.github.com/levent/iXively/master/Appcast.xml</link>
 		<description>Most recent changes with links to updates.</description>
 		<language>en</language>
 		<item>
@@ -12,7 +12,7 @@
 				Auto updater
 				]]></description>
 			<pubDate>Wed, 26 June 2012 20:20:11 +0000</pubDate>
-			<enclosure url="https://raw.github.com/levent/CosmX/master/dist/CosmX_0.2.zip" sparkle:version="0.2" length="813881" type="application/octet-stream"/>
+			<enclosure url="https://raw.github.com/levent/iXively/master/dist/CosmX_0.2.zip" sparkle:version="0.2" length="813881" type="application/octet-stream"/>
 		</item>
 		<item>
 			<title>Version 0.3 (0 bugs fixed; 1 new feature)</title>
@@ -26,7 +26,7 @@
         </ul>
 				]]></description>
 			<pubDate>Wed, 27 June 2012 09:00:00 +0000</pubDate>
-			<enclosure url="https://raw.github.com/levent/CosmX/master/dist/CosmX_0.3.zip" sparkle:version="0.3" length="815003" type="application/octet-stream"/>
+			<enclosure url="https://raw.github.com/levent/iXively/master/dist/CosmX_0.3.zip" sparkle:version="0.3" length="815003" type="application/octet-stream"/>
 		</item>
 		<item>
 			<title>Version 0.4 (0 bugs fixed; 0 new features)</title>
@@ -35,7 +35,7 @@
         Feeds are now called 'CosmX System Info'
 				]]></description>
 			<pubDate>Wed, 27 June 2012 09:37:00 +0000</pubDate>
-			<enclosure url="https://raw.github.com/levent/CosmX/master/dist/CosmX_0.4.zip" sparkle:version="0.4" length="815013" type="application/octet-stream"/>
+			<enclosure url="https://raw.github.com/levent/iXively/master/dist/CosmX_0.4.zip" sparkle:version="0.4" length="815013" type="application/octet-stream"/>
 		</item>
 		<item>
 			<title>Version 0.5</title>
@@ -46,7 +46,7 @@
         <p>'memory' datastream relabeled 'total_memory'</p>
 				]]></description>
 			<pubDate>Wed, 28 June 2012 06:45:00 +0000</pubDate>
-			<enclosure url="https://raw.github.com/levent/CosmX/master/dist/CosmX_0.5.zip" sparkle:version="0.5" length="814984" type="application/octet-stream"/>
+			<enclosure url="https://raw.github.com/levent/iXively/master/dist/CosmX_0.5.zip" sparkle:version="0.5" length="814984" type="application/octet-stream"/>
 		</item>
 		<item>
 			<title>Version 0.6</title>
@@ -57,7 +57,7 @@
                 <p>'memory' datastream relabeled 'total_memory'</p>
             ]]></description>
 			<pubDate>Wed, 28 June 2012 07:10:00 +0000</pubDate>
-			<enclosure url="https://raw.github.com/levent/CosmX/master/dist/CosmX_0.6.zip" sparkle:version="0.6" length="816352" type="application/octet-stream"/>
+			<enclosure url="https://raw.github.com/levent/iXively/master/dist/CosmX_0.6.zip" sparkle:version="0.6" length="816352" type="application/octet-stream"/>
 		</item>
 		<item>
 			<title>Version 0.8</title>
@@ -65,7 +65,15 @@
 				<h2>Bug Fixes</h2>
             ]]></description>
 			<pubDate>Wed, 28 June 2012 15:25:00 +0000</pubDate>
-			<enclosure url="https://raw.github.com/levent/CosmX/master/dist/CosmX_0.8.zip" sparkle:version="0.8" length="815274" type="application/octet-stream"/>
+			<enclosure url="https://raw.github.com/levent/iXively/master/dist/CosmX_0.8.zip" sparkle:version="0.8" length="815274" type="application/octet-stream"/>
+		</item>
+		<item>
+			<title>Version 1.0</title>
+			<description><![CDATA[
+				<h2>CosmX is now iXively</h2>
+            ]]></description>
+			<pubDate>Fri, 24 May 2013 15:25:00 +0000</pubDate>
+			<enclosure url="https://raw.github.com/levent/iXively/master/dist/iXively_1.0.zip" sparkle:version="1.0" length="514675" type="application/octet-stream"/>
 		</item>
 	</channel>
 </rss>

@@ -36,7 +36,7 @@
 -(IBAction)viewFeed:(id)sender {
     NSString *feedId = [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"];
     if (feedId.length != 0) {
-        feedURL = [[NSString alloc] initWithFormat:@"https://cosm.com/feeds/%@", feedId]; 
+        feedURL = [[NSString alloc] initWithFormat:@"https://xively.com/feeds/%@/workbench", feedId]; 
         NSURL *url = [NSURL URLWithString:feedURL];
         [[NSWorkspace sharedWorkspace] openURL:url];
     }

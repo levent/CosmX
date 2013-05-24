@@ -155,7 +155,7 @@
         
         feedId = [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"];
         apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
-        url = [[NSString alloc] initWithFormat:@"http://api.cosm.com/v2/feeds/%@.json?key=%@", feedId, apiKey];
+        url = [[NSString alloc] initWithFormat:@"http://api.xively.com/v2/feeds/%@.json?key=%@", feedId, apiKey];
         
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
         [request setHTTPMethod:@"PUT"];
